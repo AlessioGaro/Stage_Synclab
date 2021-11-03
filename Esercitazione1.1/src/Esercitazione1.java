@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.InputMismatchException;
 
 public class Esercitazione1 {
 	
@@ -13,9 +14,20 @@ public class Esercitazione1 {
 	System.out.println("ESERCIZIO 1");
 	
 	Scanner sc = new Scanner(System.in);
-	System.out.println("how manies random elements do you want to sort?");
-	System.out.println("(must be an int greater than zero)");
-	int a = sc.nextInt();
+	
+	int a = -1;
+	
+	while(a<=0) {
+		try {
+			System.out.println("PLEASE, ENTER THE LENGTH OF THE ARRAY TO SORT");
+			System.out.println("(must be a value greater than zero)");
+			a = sc.nextInt();
+		}	catch (InputMismatchException exc) {
+			sc.next();
+		}
+	}
+	
+	
 	int [] array = new int[a];
 	
 	Random rd = new Random();
