@@ -40,17 +40,7 @@ public class Main {
 		boolean error1 = true;
 		boolean error2 = true;
 		
-		
-		
-		
-		//non riesco a effettuare il controllo sul tipo di input delle variabili valore ed elementi, infatti se inserisco,
-		//per esempio, una lettera, mi entra in loop infinito il ciclo do while commentato e mi esegue all'infinito
-		//il codice relativo al do e quello relativo al catch senza eseguire nuovamente il try dove altrimenti procederei
-		//a inserire un valore valido
-		//procedendo allo stesso modo negli altri esercizi, funziona, purtroppo non capisco il perchè di questo comportamento
-		
-		
-			while(valore != 0 &&  slotRimasti > 0) {
+		while(valore != 0 &&  slotRimasti > 0) {
 				System.out.println("seleziona il numero corrispondente al bene che vuoi acquistare");
 				System.out.println("digita il valore 0 nel caso non voglia aggiungere ulteriori oggetti nel carrello");
 				System.out.println(" hai ancora " + slotRimasti + " slot liberi su 20");
